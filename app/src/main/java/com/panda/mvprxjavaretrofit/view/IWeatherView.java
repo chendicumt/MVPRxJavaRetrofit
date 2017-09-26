@@ -1,0 +1,14 @@
+package com.panda.mvprxjavaretrofit.view;
+
+import com.panda.mvprxjavaretrofit.beans.WeatherData;
+
+/**
+ * Created by PC on 2017/9/26.
+ */
+
+public interface IWeatherView {
+
+    void showProgress();
+    void hideProgress();
+    void getWeatherData(WeatherData weatherData);
+}

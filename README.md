@@ -4,7 +4,7 @@
 
 
 
-mvp+retrofit2+rxjava2  completed
+2017-9-27   mvp+retrofit2+rxjava2  completed
 
 
 

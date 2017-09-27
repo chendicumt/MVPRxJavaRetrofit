@@ -31,7 +31,7 @@ public class MyWeatherModel implements IWeatherModel {
 
 
 
-//    接口rx.Subscription负责流和资源的生命周期管理，即退订和释放资源
+
     @Override
     public Disposable getWeatherData() {
 
@@ -42,8 +42,12 @@ public class MyWeatherModel implements IWeatherModel {
                 .subscribe(new Consumer<List<WeatherData>>() {
                     @Override
                     public void accept(List<WeatherData> weatherDatas) throws Exception {
-
                         callBackModel.onSuccess(weatherDatas);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+
                     }
                 });
 
